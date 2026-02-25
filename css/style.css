@@ -1,5 +1,7 @@
 html{
     scroll-behavior: smooth;
+    background-color: rgb(252, 253, 255);
+    padding: 5px;
 }
 
 body{
@@ -7,16 +9,15 @@ body{
 }
 
 header img{
-    width: 50%;
+    width: 80%;
     max-height: none; 
-    border: 5px #d3e4f0 solid; 
+    border: 8px #d3e4f0 solid; 
     border-radius: 50%;
 }
 /* nav and skip to main */
 nav li{
     display:inline;
     padding-right:20px;
-  
 }
 
 nav a:hover, nav a:focus {
@@ -27,13 +28,20 @@ nav a{
     color: black;
     font-weight: bold;
     text-decoration: none; 
+    font-family: 'IBM Plex Serif';
+    font-size: 20px;
+    color: #152238;
+
 }
 
 nav{
+    display: flex;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #d3e4f0;
-    justify-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .skip a {
@@ -88,8 +96,30 @@ img{
 
 
 /* main content */
-h1, h2{
+h1{
     text-align: center;
+    font-family: 'Akshar';
+    font-size: 40px; 
+    color: #152238;
+
+}
+h2{
+    text-align: center;
+    font-family: 'Akshar';
+    font-size: 25px; 
+    color: #152238;
+
+}
+h3{
+    font-family: 'Akshar';
+    font-size: 20px; 
+    color: #152238;
+}
+p{
+    font-family: 'IBM Plex Serif';
+    font-size: 16px;
+    color: #152238;
+
 }
 .meet-grid{
     display:grid;
@@ -110,8 +140,16 @@ article{
     border-radius: 8px;
     margin-top: 5px;
 }
+.spacer img{
+    transition: 1s all;
+
+}
+.spacer img:active{
+    transform: scale(1.2);
+}
 
 .meet-card{
+    display:flex;
     flex-direction: column;
     align-content: center; 
     justify-content: space-between;
@@ -119,27 +157,37 @@ article{
 }
 
 summary{
-    width: 85%;
+    width: 90%;
     padding: 5px;
     margin-top: 5px;
     list-style-type: none;
-    border: 3px #7cbde7 solid; 
+    border: 3px solid #7cbde7;
     border-radius: 25px;
-    background-color: #d3e4f0;
+    background-color: #add5f4;
     text-align: center;
     transition: background-color 1s ease;
+    font-family: 'IBM Plex Serif';
+    font-size: 16px;
+    color: #152238;
 }
 summary:hover{
     background-color: white;
     font-size: 110%;
 }
 
-    /* footer content */
+.material-icons {
+  font-size: 10px; /* smaller size */
+  color: #152238;
+  margin-right: 3px;
+  vertical-align: middle;
+}
 
 footer{
     background-color: #d3e4f0;
     padding: 10px;
     margin-top: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 /* 
 @media screen and (min-width: 778px){
@@ -161,6 +209,10 @@ article{
     summary{
         transition: none;
     }
+    .spacer img:active{
+        transform: none
+    }
+
 }
 
 @media(hover:hover) and (pointer: fine){
@@ -171,4 +223,29 @@ article{
 
 body.nontouch summary:hover{
     background:green;
+}
+
+@media (prefers-color-scheme: dark){
+    .profile-details, .bio, article, header img{
+        border-color: #334155;
+    }
+    html{
+        background-color: #0F172A;
+    }
+    nav, footer{
+        background-color: #1E293B;
+    }
+    h1, h2, h3{
+        color: #F1F5F9;
+    }
+    p, nav a, .material-icons{
+        color: #CBD5E1
+    }
+    Summary{ 
+       background-color: #234d91;
+       color: #e4eaf0;
+    }
+
+    summary:hover{
+        background-color: #255acd} 
 }
