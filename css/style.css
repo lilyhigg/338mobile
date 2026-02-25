@@ -217,12 +217,12 @@ article{
 
 @media(hover:hover) and (pointer: fine){
     summary:hover{
-        background: yellow;
+        background: white;
     }
 }
 
 body.nontouch summary:hover{
-    background:green;
+    background:white;
 }
 
 @media (prefers-color-scheme: dark){
