@@ -165,7 +165,7 @@ summary{
     border-radius: 25px;
     background-color: #add5f4;
     text-align: center;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.1s ease;
     font-family: 'IBM Plex Serif';
     font-size: 16px;
     color: #152238;
