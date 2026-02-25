@@ -165,13 +165,13 @@ summary{
     border-radius: 25px;
     background-color: #add5f4;
     text-align: center;
-    transition: background-color 1s ease;
+    transition: background-color 0.3s ease;
     font-family: 'IBM Plex Serif';
     font-size: 16px;
     color: #152238;
 }
-summary:hover{
-    background-color: white;
+summary:active{
+    background-color: #d3e4f0;
     font-size: 110%;
 }
 
@@ -215,7 +215,7 @@ article{
 
 }
 
-@media(hover:hover) and (pointer: fine){
+/* @media(hover:hover) and (pointer: fine){
     summary:hover{
         background: white;
     }
@@ -223,7 +223,7 @@ article{
 
 body.nontouch summary:hover{
     background:white;
-}
+} */
 
 @media (prefers-color-scheme: dark){
     .profile-details, .bio, article, header img{
