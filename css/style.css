@@ -165,13 +165,13 @@ summary{
     border-radius: 25px;
     background-color: #add5f4;
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
     font-family: 'IBM Plex Serif';
     font-size: 16px;
     color: #152238;
 }
 summary:active{
-    background-color: #d3e4f0;
+    background-color: #7cbde7;
     font-size: 110%;
 }
 
