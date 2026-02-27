@@ -216,6 +216,9 @@ footer{
     .spacer img:active{
         transform: none
     }
+    .skip a{
+        transition: none;
+    }
 }
 
 /* dark mode color media query*/
