@@ -1,0 +1,247 @@
+/* Entire page styling */
+html{
+    /*scroll-behavior is so there is a smooth transition to content when nav links clicked*/
+    scroll-behavior: smooth;
+    background-color: rgb(252, 253, 255);
+    padding: 5px;
+}
+
+/* makes sure the images do not extent past their parents and adding line height*/
+body{
+    box-sizing: border-box;
+    line-height: 1.3;
+}
+
+/* Profile image styling with border */
+header img{
+    width: 80%;
+    max-height: none; 
+    border: 8px #d3e4f0 solid; 
+    border-radius: 50%;
+}
+
+/* nav styling to get rid of the li*/
+nav li{
+    display:inline;
+    padding-right:20px;
+}
+
+/* when nav is on hover or focused there is a border that goes around it  */
+nav a:hover, nav a:focus {
+    border: 2px solid #7cbde7;
+}
+
+/* nav link styling */
+nav a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none; 
+    font-family: 'IBM Plex Serif';
+    font-size: 20px;
+    color: #152238;
+}
+
+/* nav styling to create nav bar  */
+nav{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #d3e4f0;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* this opens up the "skip to main content" link when tab is clicked   */
+.skip a {
+    position: absolute; 
+    left: -9999px;           
+    background: white;
+    padding: 6px;
+    z-index: 1000;           
+    text-decoration: none;
+    color: black;
+    transition: top 0.5s ease-out, left 0.5s ease-out; 
+}
+
+.skip a:focus {
+    left: 50%;              
+    top: 10px;                
+    transform: translateX(-50%); 
+}
+
+/* header content */
+/* creating a grid for the profile info */
+.profile{
+    display:grid; 
+    gap: 15px;
+    grid-template-columns: 1fr;
+}
+
+/* centering profile photo */
+#profile figure {
+    display: grid;
+    justify-items: center; 
+}
+
+/* styling the section titled "Athlete details" */
+.profile-details {
+    border: 5px solid #d3e4f0;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+/* styling the bio section */
+.bio {
+    border: 5px solid #d3e4f0;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+/* styling the text */
+h1{
+    text-align: center;
+    font-family: 'Akshar';
+    font-size: 40px; 
+    color: #152238;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Akshar';
+    font-size: 25px; 
+    color: #152238;
+}
+
+h3{
+    font-family: 'Akshar';
+    font-size: 20px; 
+    color: #152238;
+}
+
+p{
+    font-family: 'IBM Plex Serif';
+    font-size: 16px;
+    color: #152238;
+}
+
+/* styling the grid with all of the meet information */
+.meet-grid{
+    display:grid;
+    grid-template-columns: 48% 48%;
+    width:90%;
+    justify-content: space-around;
+    margin:auto
+}
+
+article{
+    padding: 2px;
+    border: 5px solid #d3e4f0;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+/* styling the images in the grid */
+img{
+    width: 100%;
+    max-height: 50vh;
+}
+
+/* adding transitions to the images so they grow when you select them */
+.spacer img{
+    transition: 1s all;
+}
+
+.spacer img:active{
+    transform: scale(1.2);
+}
+
+/* styling the cards that contain each meet information to stack the info on top of each other */
+.meet-card{
+    display:flex;
+    flex-direction: column;
+    align-content: center; 
+    justify-content: space-between;
+}
+
+/* styling the "more info" text to look and act like a button */
+summary{
+    width: 90%;
+    padding: 5px;
+    margin-top: 5px;
+    list-style-type: none;
+    border: 3px solid #7cbde7;
+    border-radius: 25px;
+    background-color: #add5f4;
+    text-align: center;
+    transition: background-color 0.1s ease;
+    font-family: 'IBM Plex Serif';
+    font-size: 16px;
+    color: #152238;
+}
+
+/* changing the "more info" button when they are selected */
+summary:active{
+    background-color: #d3e4f0;
+    font-size: 110%;
+}
+
+/* styling the icons added in the summary content */
+.material-icons {
+  font-size: 10px; 
+  color: #152238;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+/* footer styling at the bottom of the page */
+footer{
+    background-color: #d3e4f0;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* reduced motion media query  */
+@media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto;
+    }
+    summary{
+        transition: none;
+    }
+    .spacer img:active{
+        transform: none
+    }
+    .skip a{
+        transition: none;
+    }
+}
+
+/* dark mode color media query*/
+@media (prefers-color-scheme: dark){
+    .profile-details, .bio, article, header img{
+        border-color: #334155;
+    }
+    html{
+        background-color: #0F172A;
+    }
+    nav, footer{
+        background-color: #1E293B;
+    }
+    h1, h2, h3{
+        color: #F1F5F9;
+    }
+    p, nav a, .material-icons{
+        color: #CBD5E1
+    }
+    Summary{ 
+       background-color: #234d91;
+       color: #e4eaf0;
+    }
+    summary:active{
+        background-color: #334155} 
+}
